@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+header {
+  background-color: rgb(46, 46, 46);
+  width: 100%;
+}
+#logo {
+  padding-left: 20px;
+  font-size: 30px;
+  color: rgb(245, 140, 54);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.brand-title {
+  font-size: 30px;
+  padding-left: 30px;
+  padding-bottom: 0;
+  color: #fff;
+  display: inline-block;
+  font-family: "arial";
+  cursor: pointer;
+}
+#brand-title2{
+    color: #fff;
+    display: inline-block;
+    font-family: "arial";
+    padding: 5px 5px 5px 5px;
+    font-size: 30px;
+    background-color: rgb(245, 140, 54);
+    border-radius: 10px;
+    cursor: pointer;
+}
+#Search-bar{
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+#Search-bar input {
+    padding: 10px;
+    border: 0px;
+    width: 500px;
+    height: 30px;
+    background-color: rgb(63, 63, 63);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#icon{
+    background-color: rgb(63, 63, 63);
+    padding-right: 10px;
+    cursor: pointer;
+}
+#icon-search{
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 140, 54);
+    border: 0px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+nav{
+    border-top: #797979 0.5px  solid;
+    background-color:rgb(46, 46, 46);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+P{
+    color: #fff;
+    font-family: "arial";
+}
+P:hover{
+    border-bottom: 2px solid rgb(245, 140, 54);
+}
+#icon-camera{
+  padding:6px 6px 6px 6px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 20px;
+  background-color:  #797979;
+  cursor: pointer;
+}
+#icon-manga{
+    padding:6px 6px 6px 6px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 20px;
+    background-color:  #797979;
+    cursor: pointer;
+    font-family: "arial";
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 255, 170);
+}
+#ads{
+    padding-top: 20px;
+
+}
+#ads2{
+    padding-top: 20px;
+}
+
+#body{
+    display: flex;
+    justify-content: space-between;
+}
+#manga{
+    padding:10px 10px 10px 10px;
+    color: #fff;
+    display: inline-block;   
+    width: 400px;
+    height: 500px;
+    background-color: #797979;
+    border-radius: 20px;
+    overflow: auto;
+    margin: 15px;
+    text-align: center;
+
+}
+#mangaimg{
+    max-height: 300px;
+    width: fit-content;
+}
+#descEdit{
+    font-size: 20px;
+}
+#mangatitle{
+    color:rgb(255, 255, 255) ;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    height: fit-content;
+    width: fit-content;
+    color: white;
+
+    border-radius:10px
+}
