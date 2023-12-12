@@ -111,7 +111,6 @@ P:hover{
     justify-content: space-between;
 }
 #manga{
-    padding:10px 10px 10px 10px;
     color: #fff;
     display: inline-block;   
     width: 400px;
@@ -121,6 +120,7 @@ P:hover{
     overflow: auto;
     margin: 15px;
     text-align: center;
+
 
 }
 #mangaimg{
@@ -144,6 +144,35 @@ P:hover{
     height: fit-content;
     width: fit-content;
     color: white;
-
-    border-radius:10px
+    border-radius:10px;
+    
+    
+}
+#modal {
+    max-height: 400px;
+    width: 300px;
+    top: 50%;
+    left: 40%;
+  }
+#closeModal{
+    background-color: rgb(245, 140, 54) ;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    border: none;
+    border-radius: 50px;
+    float: right;
+}
+#closeModal:hover{
+    background-color: #797979;
+    color: #fff;
+    transition-duration: 0.5s;
+}
+#modalDescription{
+    position: absolute;
+    margin-right:200px;
+   height: fit-content;
+   width: fit-content;
+   background-color: #797979;
+   text-align:center;
+   border:  rgb(245, 140, 54) 4px solid ;
 }

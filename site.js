@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector("#Search-bar input");
   const searchButton = document.querySelector("#icon-search");
   const container = document.getElementById("container");
+  const modal = document.getElementById("modal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalImage = document.getElementById("modalImage");
+  const modalDescription = document.getElementById("modalDescription");
+  const closeModalButton = document.getElementById("closeModal");
 
   searchButton.addEventListener("click", handleSearch);
 
@@ -15,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     performSearch(searchValue);
   }
+
   function performSearch(searchValue) {
     fetch(`https://api.mangadex.org/manga?title=${searchValue}&limit=10&includes[]=cover_art`)
       .then((response) => response.json())
       .then((data) => {
-   
         container.innerHTML = "";
 
         for (let i = 0; i < data.data.length; i++) {
@@ -32,14 +37,26 @@ document.addEventListener("DOMContentLoaded", function () {
           );
           let path = fileSearch.attributes.fileName;
 
-          container.innerHTML += `<div id="manga">
-                                    <h1 id="mangatitle">${title}</h1>
+          const mangaElement = document.createElement("div");
+          mangaElement.id = "manga";
+          mangaElement.innerHTML = `<h1 id="mangatitle">${title}</h1>
                                     <br>
-                                    <img id="mangaimg" src="https://uploads.mangadex.org/covers/${mangaId}/${path}">
-                                    <h1 id="descEdit">${description}</h1>
-                                  </div>`;
+                                    <img id="mangaimg" src="https://uploads.mangadex.org/covers/${mangaId}/${path}">`
+          mangaElement.addEventListener("click", () => openModal(title, `https://uploads.mangadex.org/covers/${mangaId}/${path}`, description));
+          container.appendChild(mangaElement);
         }
       })
       .catch((error) => console.log(error));
   }
+
+  function openModal(title, imageUrl, description) {
+    modalTitle.textContent = title;
+    modalImage.src = imageUrl;
+    modalDescription.textContent = description;
+    modal.style.display = "block";
+  }
+
+  closeModalButton.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 });
